@@ -102,6 +102,7 @@ public class InputManager : MonoBehaviour
 
 				if (travellingSalesman.transform.position == hitArr[k])
 				{
+					Destroy(gameArray[k]);
 					k++;
 				}
 			}
@@ -127,6 +128,11 @@ public class InputManager : MonoBehaviour
 
 		followPathBool = 1;
 		travellingSalesman = GameObject.Instantiate(followPrefab, hitArr[0], Quaternion.identity);
+
+		if(gameArray[0] != null)
+        {
+			Destroy(gameArray[0]);
+        }
 
 		len = i;
 		k = 1;
@@ -201,7 +207,7 @@ public class InputManager : MonoBehaviour
 		i = path1Len; // i = n
 
 		drawPath(path1Array, path1Len); // redraw, gameArray store
-		follow();
+		//follow();
 	}
 
 	public void path2Save()
@@ -235,8 +241,6 @@ public class InputManager : MonoBehaviour
 		i = path2Len; // i = n
 
 		drawPath(path2Array, path2Len); // redraw, gameArray store
-		follow();
-
-
+		//follow();
 	}
 }
