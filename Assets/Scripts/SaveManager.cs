@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 //using Vectrosity;
@@ -24,7 +25,7 @@ public class SaveManager : MonoBehaviour
 
 	private int pathLen;					// length of the path of location A and B, respectively
 
-	public float speed;                     // manage the speed of the helper rabit
+	static float speed;                     // manage the speed of the helper rabit
 
 	public GameObject followPrefab;         // the original figure of the rabit
 	private GameObject travellingSalesman;  // replicate the figure of the rabit for the application
@@ -32,6 +33,8 @@ public class SaveManager : MonoBehaviour
 	private int followPathBool;             // whether the path is to followed or not
 
 	public static bool rabitVisible;        // whether the rabit is visible on the flat plane or not
+
+	public InputField speedtext;
 
 	void Start()
 	{
@@ -44,6 +47,8 @@ public class SaveManager : MonoBehaviour
 		pathLen = 0;							// initialize the pathLen to 0
 
 		rabitVisible = false;                   // initial not visible state
+
+		speed = 0.5f;							// set the speed of the helper rabit
 	}
 
 	public void initialize()
@@ -52,7 +57,6 @@ public class SaveManager : MonoBehaviour
 		i = 0;                          // set pathArray length to 0
 		len = -1;                       // set final pathArray length to -1 (for safety purposes)
 		followPathBool = 0;             // set followPath Boolean to false, initially
-		speed = 0.55f;                  // set the speed of the helper rabit
 	}
 
 	void Update()
@@ -77,7 +81,14 @@ public class SaveManager : MonoBehaviour
 
 			if (k < len)
 			{
-				travellingSalesman.transform.position = Vector3.MoveTowards(travellingSalesman.transform.position, hitArr[k], step);
+				if (step > Vector3.Distance(travellingSalesman.transform.position, hitArr[k]))
+                {
+					travellingSalesman.transform.position = hitArr[k];
+				}
+                else
+                {
+					travellingSalesman.transform.position = Vector3.MoveTowards(travellingSalesman.transform.position, hitArr[k], step);
+				}
 
 				Vector3 relativePos = hitArr[k] - travellingSalesman.transform.position;
 				Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
@@ -191,8 +202,15 @@ public class SaveManager : MonoBehaviour
 		i = pathLen; // i = n
 
 		drawPath(pathArray, pathLen); // redraw, gameArray store
-										//follow();
 	}
+
+	public void applySpeed()
+    {
+		if (speedtext.text != null && float.Parse(speedtext.text) <= 3f)
+        {
+			speed = float.Parse(speedtext.text);
+		}
+    }
 
 	public void upload()
     {

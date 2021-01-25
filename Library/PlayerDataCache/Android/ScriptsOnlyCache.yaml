@@ -1,7 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - InputManager
+    - SaveManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.XR.ARCore.Editor.dll:
@@ -25,8 +25,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -39,9 +41,10 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.InputField
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/SavePath.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -77,45 +80,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11804}
     - Class: 114
-      Script: {instanceID: 11806}
+      Script: {instanceID: 11832}
     - Class: 114
-      Script: {instanceID: 11834}
+      Script: {instanceID: 11848}
     - Class: 114
-      Script: {instanceID: 11850}
+      Script: {instanceID: 12056}
     - Class: 114
-      Script: {instanceID: 12058}
+      Script: {instanceID: 12102}
     - Class: 114
-      Script: {instanceID: 12104}
+      Script: {instanceID: 12146}
     - Class: 114
-      Script: {instanceID: 12148}
+      Script: {instanceID: 12330}
     - Class: 114
-      Script: {instanceID: 12294}
+      Script: {instanceID: 12612}
     - Class: 114
-      Script: {instanceID: 12332}
+      Script: {instanceID: 12940}
     - Class: 114
-      Script: {instanceID: 12614}
+      Script: {instanceID: 13178}
     - Class: 114
-      Script: {instanceID: 12942}
+      Script: {instanceID: 13314}
     - Class: 114
-      Script: {instanceID: 13180}
+      Script: {instanceID: 13532}
     - Class: 114
-      Script: {instanceID: 13546}
+      Script: {instanceID: 13548}
     - Class: 114
-      Script: {instanceID: 13616}
+      Script: {instanceID: 13592}
     - Class: 114
-      Script: {instanceID: 13850}
+      Script: {instanceID: 13618}
     - Class: 114
-      Script: {instanceID: 13938}
+      Script: {instanceID: 13852}
     - Class: 114
-      Script: {instanceID: 13990}
+      Script: {instanceID: 13940}
     - Class: 114
-      Script: {instanceID: 14022}
+      Script: {instanceID: 13992}
     - Class: 114
-      Script: {instanceID: 14226}
+      Script: {instanceID: 14024}
     - Class: 114
-      Script: {instanceID: 14372}
+      Script: {instanceID: 14228}
     - Class: 114
-      Script: {instanceID: 14494}
+      Script: {instanceID: 14374}
+    - Class: 114
+      Script: {instanceID: 14496}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -141,12 +146,6 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
-  - hash:
-      serializedVersion: 2
-      Hash: f087c23fbfa15475a0d110af46fb0496
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -491,6 +490,12 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
+      Hash: f087c23fbfa15475a0d110af46fb0496
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -513,6 +518,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARTrackedImageManager
+  - hash:
+      serializedVersion: 2
+      Hash: 9feb4bce070dfc00cbd539505d5a3fb5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SaveManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -807,13 +818,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: ab156ce0d63ad257fe9046b7ec4e9188
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SaveManager
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/SavePath.unity
   playerPath: C:/Users/q/Downloads/temp.apk
