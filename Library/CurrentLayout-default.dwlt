@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1904
     height: 981
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 41
+  controlID: 65
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 42
+  controlID: 66
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 43
+  controlID: 67
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -396,20 +396,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\q\Unity\madcamp_week4\AR Navigating
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 44}
-    m_SelectedIDs: 443d0000
-    m_LastClickedID: 15684
+    m_SelectedIDs: 3e3d0000
+    m_LastClickedID: 15678
     m_ExpandedIDs: 00000000223d0000243d0000263d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -526,7 +526,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 292
   m_AssetGUID: 
   m_InstanceID: 0
   m_LockTracker:
@@ -560,9 +560,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 06300000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 68e8ffff86e8ffff54e9ffff9aeaffff8cebffff58ecffff2cedfffff8edffff44efffff18f0ffffe4f0ffff0af2ffffd6f2ffffaaf3ffff76f4ffff56f5ffffd4f6ffffacf7ffffd4f7ffffaaf8ffffbef8ffffdcf9ffff5efbffffffffffff
+      m_ExpandedIDs: 2cceffffaeceffff04cfffff54cfffff72cfffff74cfffff74d1ffff92d1ffff94d1ffff3ad2ffff94d2ffffe8d2ffff56d3fffff6d3ffff50d4ffffb8d4ffff14d5ffffead5ffff48d6ffff66d7ffffbad7ffffe2d7ffff34d8ffff46d8ffff1ed9ffff8cd9ffffaad9ffffacd9ffffe6d9ffff04daffff06daffff80daffff3cdcffff5ee1ffff7ce1ffff7ee1ffffb8e2ffffd6e2ffffa2e3ffff4cf0ffff20f1ffffcef5ffff9cf6ffff6af7ffffaef7ffffccf7ffffcef7ffff0cf8ffff2af8fffff4f8ffff5efbffffffffffff344e00003c5600005261000054680000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -578,7 +578,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 4}
+        m_ClientGUIView: {fileID: 3}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -673,7 +673,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.055779282, y: 0.008084854, z: -0.00045261113, w: -0.99841714}
     speed: 2
-    m_Value: {x: -0.05577928, y: 0.008084853, z: -0.00045261113, w: -0.9984171}
+    m_Value: {x: -0.055778902, y: 0.008084799, z: -0.00045260804, w: -0.99841034}
   m_Size:
     m_Target: 159.73322
     speed: 2
@@ -750,8 +750,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -507
     m_HBaseRangeMax: 507
-    m_VBaseRangeMin: -275.5
-    m_VBaseRangeMax: 275.5
+    m_VBaseRangeMin: -265
+    m_VBaseRangeMax: 265
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -768,11 +768,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 0
+      y: 21
       width: 1014
-      height: 551
+      height: 530
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 507, y: 275.5}
+    m_Translation: {x: 507, y: 265}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -780,9 +780,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -507
-      y: -275.5
+      y: -265
       width: 1014
-      height: 551
+      height: 530
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1014, y: 551}

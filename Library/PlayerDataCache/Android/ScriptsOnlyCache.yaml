@@ -41,7 +41,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/LoadPath.unity:
+    Assets/Scenes/SampleScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -139,8 +139,6 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    - Class: 850595691
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -809,7 +807,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: ab156ce0d63ad257fe9046b7ec4e9188
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SaveManager
   platform: 13
   scenePathNames:
-  - Assets/Scenes/LoadPath.unity
+  - Assets/Scenes/SampleScene.unity
   playerPath: C:/Users/q/Downloads/temp.apk

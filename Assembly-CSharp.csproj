@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\AddOns\Rabbits\Demo\Scripts\AnimatorParamatersChange.cs" />
+    <Compile Include="Assets\Scripts\SaveManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

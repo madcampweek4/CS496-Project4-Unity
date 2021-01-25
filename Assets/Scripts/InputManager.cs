@@ -199,6 +199,7 @@ public class InputManager : MonoBehaviour
 			Destroy(travellingSalesman); // current rabit Destroy
 		}
 		rabitVisible = true;
+		followPathBool = 1;
 
 		for (int x = 0; x < path1Len; x++)
 		{
@@ -233,6 +234,7 @@ public class InputManager : MonoBehaviour
 			Destroy(travellingSalesman); // current rabit Destroy
 		}
 		rabitVisible = true;
+		followPathBool = 1;
 
 		for (int x = 0; x < path2Len; x++)
 		{
