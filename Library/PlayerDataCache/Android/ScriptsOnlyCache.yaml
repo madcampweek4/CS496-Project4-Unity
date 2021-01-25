@@ -41,7 +41,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/LoadPath.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -811,5 +811,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/LoadPath.unity
   playerPath: C:/Users/q/Downloads/temp.apk

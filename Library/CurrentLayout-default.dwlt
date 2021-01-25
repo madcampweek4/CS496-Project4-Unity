@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1904
     height: 981
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 21
+  controlID: 41
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 92
+  controlID: 42
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 93
+  controlID: 43
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -396,20 +396,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\q\Unity\madcamp_week4\AR Navigating
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 44}
-    m_SelectedIDs: 423d0000
-    m_LastClickedID: 15682
+    m_SelectedIDs: 443d0000
+    m_LastClickedID: 15684
     m_ExpandedIDs: 00000000223d0000243d0000263d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -482,7 +482,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 3}
+      m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -560,9 +560,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 06300000
       m_LastClickedID: 0
-      m_ExpandedIDs: c8e1ffffe6e1ffffb0e2ffff04e5ffff34e5ffff2efbffff5efbffff
+      m_ExpandedIDs: 68e8ffff86e8ffff54e9ffff9aeaffff8cebffff58ecffff2cedfffff8edffff44efffff18f0ffffe4f0ffff0af2ffffd6f2ffffaaf3ffff76f4ffff56f5ffffd4f6ffffacf7ffffd4f7ffffaaf8ffffbef8ffffdcf9ffff5efbffffffffffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -673,7 +673,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.055779282, y: 0.008084854, z: -0.00045261113, w: -0.99841714}
     speed: 2
-    m_Value: {x: -0.055778902, y: 0.008084799, z: -0.00045260804, w: -0.99841034}
+    m_Value: {x: -0.05577928, y: 0.008084853, z: -0.00045261113, w: -0.9984171}
   m_Size:
     m_Target: 159.73322
     speed: 2
@@ -750,8 +750,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -507
     m_HBaseRangeMax: 507
-    m_VBaseRangeMin: -265
-    m_VBaseRangeMax: 265
+    m_VBaseRangeMin: -275.5
+    m_VBaseRangeMax: 275.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -768,11 +768,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 1014
-      height: 530
+      height: 551
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 507, y: 265}
+    m_Translation: {x: 507, y: 275.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -780,9 +780,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -507
-      y: -265
+      y: -275.5
       width: 1014
-      height: 530
+      height: 551
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1014, y: 551}
