@@ -34,7 +34,13 @@ public class SaveManager : MonoBehaviour
 
 	public static bool rabitVisible;        // whether the rabit is visible on the flat plane or not
 
-	public InputField speedtext;
+	public InputField speedText;			// Inputfields.
+	public InputField startText;
+	public InputField finishText;
+
+	public Button postButton;
+
+	private bool isUpload;
 
 	void Start()
 	{
@@ -48,7 +54,19 @@ public class SaveManager : MonoBehaviour
 
 		rabitVisible = false;                   // initial not visible state
 
-		speed = 0.5f;							// set the speed of the helper rabit
+		speed = 0.5f;                           // set the speed of the helper rabit
+
+		// canvas setting
+		speedText.characterLimit = 3;
+		startText.characterLimit = 10;
+		finishText.characterLimit = 10;
+
+		startText.gameObject.SetActive(false);
+		finishText.gameObject.SetActive(false);
+		postButton.gameObject.SetActive(false);
+
+		isUpload = false;
+
 	}
 
 	public void initialize()
@@ -71,7 +89,6 @@ public class SaveManager : MonoBehaviour
 				var go = GameObject.Instantiate(arrowGameObject, hitPose.position, Quaternion.identity);
 				gameArray[i] = go;
 				i++;
-				Debug.Log(i);
 			}
 		}
 
@@ -81,7 +98,7 @@ public class SaveManager : MonoBehaviour
 
 			if (k < len)
 			{
-				if (step > Vector3.Distance(travellingSalesman.transform.position, hitArr[k]))
+				if (0.02 >= Vector3.Distance(travellingSalesman.transform.position, hitArr[k]))
                 {
 					travellingSalesman.transform.position = hitArr[k];
 				}
@@ -90,12 +107,11 @@ public class SaveManager : MonoBehaviour
 					travellingSalesman.transform.position = Vector3.MoveTowards(travellingSalesman.transform.position, hitArr[k], step);
 				}
 
-				Vector3 relativePos = hitArr[k] - travellingSalesman.transform.position;
-				Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
-				travellingSalesman.transform.rotation = rotation;
-
 				if (travellingSalesman.transform.position == hitArr[k])
 				{
+					Vector3 relativePos = hitArr[k+1] - travellingSalesman.transform.position;
+					Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
+					travellingSalesman.transform.rotation = rotation;
 					Destroy(gameArray[k]);
 					k++;
 				}
@@ -123,6 +139,13 @@ public class SaveManager : MonoBehaviour
 		followPathBool = 1;
 		travellingSalesman = GameObject.Instantiate(followPrefab, hitArr[0], Quaternion.identity);
 
+		if (hitArr[1] != null)
+        {
+			Vector3 relativePos = hitArr[1] - travellingSalesman.transform.position;
+			Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
+			travellingSalesman.transform.rotation = rotation;
+		}
+
 		if (gameArray[0] != null)
 		{
 			Destroy(gameArray[0]);
@@ -148,11 +171,8 @@ public class SaveManager : MonoBehaviour
 
 	public void reset()
 	{
-		Debug.Log("reset");
-		Debug.Log(i);
 		for (int x = 0; x < i; x++)
 		{
-			Debug.Log(x);
 			Destroy(gameArray[x]);
 		}
 		initialize(); // i = 0, len = 0
@@ -169,18 +189,14 @@ public class SaveManager : MonoBehaviour
 
 	public void savePath()
 	{
-		Debug.Log("pathSave call");
-
 		if (rabitVisible) return; // if rabit moving
 
 		rabitVisible = true;
-		Debug.Log(i);
 		pathLen = i; // n
 		for (int x = 0; x < pathLen; x++)
 		{
 			pathArray[x] = hitArr[x];
 		}
-		Debug.Log("path1Save");
 		reset();
 		initialize();
 	}
@@ -206,14 +222,42 @@ public class SaveManager : MonoBehaviour
 
 	public void applySpeed()
     {
-		if (speedtext.text != null && float.Parse(speedtext.text) <= 3f)
+		if (speedText.text != null && float.Parse(speedText.text) <= 3f)
         {
-			speed = float.Parse(speedtext.text);
+			speed = float.Parse(speedText.text);
 		}
     }
 
 	public void upload()
     {
-		// 현아가 연동해줄거임 헤헿ㅎ
+		if (isUpload)
+        {
+			isUpload = false;
+			startText.gameObject.SetActive(false);
+			finishText.gameObject.SetActive(false);
+			postButton.gameObject.SetActive(false); 
+		}
+        else
+        {
+			isUpload = true;
+			startText.gameObject.SetActive(true);
+			finishText.gameObject.SetActive(true);
+			postButton.gameObject.SetActive(true);
+		}
+	}
+
+	public void post()
+    {
+		if (startText.text == "" || finishText.text == "")
+        {
+			isUpload = false;
+			startText.gameObject.SetActive(false);
+			finishText.gameObject.SetActive(false);
+			postButton.gameObject.SetActive(false);
+		}
+        else
+        {
+			// startText, finishText, pathArray post.
+        }
     }
 }
